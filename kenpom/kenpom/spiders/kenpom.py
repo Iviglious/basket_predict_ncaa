@@ -17,7 +17,7 @@ class KenpomSpider(scrapy.Spider):
     def parse(self, response):
         season = response.meta['season']
         res = BeautifulSoup(response.body)
-        teams = pd.read_csv('../../dataset/Teams.csv')
+        teams = pd.read_csv('../../dataset/kaggle/Teams.csv')
         all_data = pd.DataFrame(columns = ('Rank','Team','Conf','W-L','AdjEM','AdjO','AdjD','AdjT','Luck','SOS AdjEM','SOS OppO','SOS OppD','NCSOS AdjEM'))
         cmp_data = pd.DataFrame(columns = ('OriTeamName','AdjTeamName'))
         idx = 0
