@@ -20,8 +20,8 @@ Arizona,Arizona
 Iowa St,Iowa St
 Michigan,Michigan
 Wisconsin,Wisconsin
-Oklahoma St,Oklahoma St
 Cincinnati,Cincinnati
+Oklahoma St,Oklahoma St
 Butler,Butler
 Florida St,Florida St
 Notre Dame,Notre Dame
@@ -62,11 +62,11 @@ Tennessee,Tennessee
 Georgia,Georgia
 California,California
 Vermont,Vermont
+UCF,UCF
 Illinois,Illinois
 East Tennessee St,ETSU
 Oklahoma,Oklahoma
 Texas A&M,Texas A&M
-UCF,UCF
 Georgetown,Georgetown
 Iowa,Iowa
 UT Arlington,UT Arlington
@@ -84,8 +84,8 @@ Monmouth,Monmouth NJ
 Belmont,Belmont
 New Mexico St,New Mexico St
 Davidson,Davidson
-Penn St,Penn St
 Cal St Bakersfield,CS Bakersfield
+Penn St,Penn St
 Colorado St,Colorado St
 College of Charleston,Col Charleston
 St Bonaventure,St Bonaventure
@@ -99,10 +99,10 @@ St John's,St John's
 Akron,Akron
 Fresno St,Fresno St
 Furman,Furman
-Oakland,Oakland
 Memphis,Memphis
-Valparaiso,Valparaiso
+Oakland,Oakland
 Stanford,Stanford
+Valparaiso,Valparaiso
 Ohio,Ohio
 Nebraska,Nebraska
 UNC Asheville,UNC Asheville
@@ -120,16 +120,16 @@ Iona,Iona
 UNC Greensboro,UNC Greensboro
 Old Dominion,Old Dominion
 New Mexico,New Mexico
-Buffalo,Buffalo
 George Mason,George Mason
+Buffalo,Buffalo
 Arkansas St,Arkansas St
 Santa Clara,Santa Clara
 Arizona St,Arizona St
 Toledo,Toledo
 Albany,Albany NY
 Georgia St,Georgia St
-Rutgers,Rutgers
 George Washington,G Washington
+Rutgers,Rutgers
 William & Mary,William & Mary
 Missouri St,Missouri St
 Utah St,Utah St
@@ -144,26 +144,26 @@ Kent St,Kent
 Fort Wayne,IPFW
 South Dakota,South Dakota
 Mercer,Mercer
-Louisiana Lafayette,ULL
 Tulsa,Tulsa
+Louisiana Lafayette,ULL
 Utah Valley,Utah Valley
 Eastern Michigan,E Michigan
 Marshall,Marshall
 Southern Illinois,S Illinois
-Grand Canyon,Grand Canyon
 Yale,Yale
+Grand Canyon,Grand Canyon
 Evansville,Evansville
 Rice,Rice
 Northeastern,Northeastern
-Jacksonville St,Jacksonville St
 Massachusetts,Massachusetts
+Jacksonville St,Jacksonville St
 Tennessee St,Tennessee St
 Samford,Samford
 North Carolina Central,NC Central
 Missouri,Missouri
-Wright St,Wright St
 Western Michigan,W Michigan
 North Dakota St,N Dakota St
+Wright St,Wright St
 Lipscomb,Lipscomb
 Washington,Washington
 North Dakota,North Dakota
@@ -181,24 +181,24 @@ Weber St,Weber St
 New Hampshire,New Hampshire
 New Orleans,New Orleans
 DePaul,DePaul
-South Dakota St,S Dakota St
 Saint Joseph's,St Joseph's PA
+South Dakota St,S Dakota St
 Eastern Washington,E Washington
 Denver,Denver
 Hofstra,Hofstra
-Green Bay,WI Green Bay
 East Carolina,East Carolina
+Green Bay,WI Green Bay
 Canisius,Canisius
 Boston University,Boston Univ
 Washington St,Washington St
 Georgia Southern,Ga Southern
 Montana,Montana
 UMBC,UMBC
-Texas A&M Corpus Chris,Texas A&M
+Texas A&M Corpus Chris,TAM C. Christi
 UAB,UAB
-IUPUI,IUPUI
-Murray St,Murray St
 Coastal Carolina,Coastal Car
+Murray St,Murray St
+IUPUI,IUPUI
 Indiana St,Indiana St
 UTEP,UTEP
 Morehead St,Morehead St
@@ -230,20 +230,20 @@ Lamar,Lamar
 Central Michigan,C Michigan
 Army,Army
 Oral Roberts,Oral Roberts
-Illinois Chicago,IL Chicago
 Western Kentucky,WKU
 Columbia,Columbia
+Illinois Chicago,IL Chicago
 Charlotte,Charlotte
 Southeastern Louisiana,SE Louisiana
 Montana St,Montana St
 Portland St,Portland St
 Sam Houston St,Sam Houston St
-Cleveland St,Cleveland St
 South Alabama,South Alabama
 Tulane,Tulane
+Cleveland St,Cleveland St
 Stephen F Austin,SF Austin
-USC Upstate,SC Upstate
 Little Rock,Ark Little Rock
+USC Upstate,SC Upstate
 Pacific,Pacific
 Wagner,Wagner
 Bowling Green,Bowling Green
@@ -258,8 +258,8 @@ Tennessee Tech,Tennessee Tech
 Niagara,Niagara
 Drake,Drake
 Milwaukee,WI Milwaukee
-San Diego,San Diego
 Louisiana Monroe,ULM
+San Diego,San Diego
 Cal St Fullerton,CS Fullerton
 Seattle,Seattle
 Cornell,Cornell
@@ -279,8 +279,8 @@ FIU,Florida Intl
 Brown,Brown
 Miami OH,Miami OH
 Portland,Portland
-Youngstown St,Youngstown St
 Bryant,Bryant
+Youngstown St,Youngstown St
 Northern Colorado,N Colorado
 NJIT,NJIT
 Alcorn St,Alcorn St
@@ -294,12 +294,12 @@ South Florida,South Florida
 Radford,Radford
 UMass Lowell,MA Lowell
 Western Illinois,W Illinois
-Northwestern St,Northwestern
+Northwestern St,Northwestern LA
 Quinnipiac,Quinnipiac
 Norfolk St,Norfolk St
-Detroit,Detroit
 UT Rio Grande Valley,UTRGV
 Sacred Heart,Sacred Heart
+Detroit,Detroit
 Pepperdine,Pepperdine
 Abilene Christian,Abilene Chr
 Dartmouth,Dartmouth
@@ -314,8 +314,8 @@ Binghamton,Binghamton
 Central Arkansas,Cent Arkansas
 Marist,Marist
 Nicholls St,Nicholls St
-SIU Edwardsville,Edwardsville
 Savannah St,Savannah St
+SIU Edwardsville,Edwardsville
 Stetson,Stetson
 McNeese St,McNeese St
 North Texas,North Texas
@@ -342,7 +342,7 @@ Bethune Cookman,Bethune-Cookman
 Central Connecticut,Central Conn
 Alabama St,Alabama St
 Coppin St,Coppin St
-Mississippi Valley St,Mississippi St
+Mississippi Valley St,MS Valley St
 Florida A&M,Florida A&M
 St Francis NY,St Francis NY
 Longwood,Longwood

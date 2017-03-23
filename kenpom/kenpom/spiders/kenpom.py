@@ -110,11 +110,11 @@ class KenpomSpider(scrapy.Spider):
                 elif t == u'FIU':
                     s = 'Florida Intl'
                 elif t == u'Northwestern St':
-                    s = 'Northwestern'
+                    s = 'Northwestern LA'
                 elif t == u'Tennessee Martin':
                     s = 'TN Martin'
                 elif t == u'Texas A&M Corpus Chris':
-                    s = 'Texas A&M'
+                    s = 'TAM C. Christi'
                 elif t == u'Western Illinois':
                     s = 'W Illinois'
                 elif t == u'Stephen F Austin':
@@ -132,7 +132,7 @@ class KenpomSpider(scrapy.Spider):
                 elif t == u'Charleston Southern':
                     s = 'Charleston So'
                 elif t == u'Mississippi Valley St':
-                    s = 'Mississippi St'
+                    s = 'MS Valley St'
                 elif t == u'Cal St Fullerton':
                     s = 'CS Fullerton'
                 elif t == u'Bethune Cookman':
@@ -222,5 +222,5 @@ class KenpomSpider(scrapy.Spider):
             all_data.loc[idx] = data1
             cmp_data.loc[idx] = data2
             idx = idx + 1
-        all_data.to_csv(str(season)[2:] + 'PCBR.csv', index = False)
-        cmp_data.to_csv(str(season)[2:] + 'TeamNameCmp.csv', index = False)
+        all_data.to_csv('PCBR_' + str(season) + '.csv', index = False)
+        cmp_data.to_csv('TeamNameCmp_' + str(season) + '.csv', index = False)
