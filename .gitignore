@@ -2,3 +2,8 @@
 *.pyc
 .idea/
 .ipynb_checkpoints/
+*.aux
+*.log
+*.out
+*.pdf
+*.gz
