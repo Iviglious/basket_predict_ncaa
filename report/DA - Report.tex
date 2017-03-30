@@ -109,16 +109,158 @@ BCOR5mm, % Binding correction
 \section{Dataset}
 \subsection{Features description}
 \begin{description}
-\item [W-L]number of wins and losses
-\item [AdjEM] Adjusted Efficiency Margin.
-\item [AdjO] Adjusted offensive efficiency. Points scored per 100 possessions.
-\item [AdjD] Adjusted defensive efficiency. Point allowed per 100 possessions.
-\item [AdjT] Adjusted tempo. Possessions per 40 minutes.
-\item [Luck] Luck rating.
-\item [SOS AdjEM] Strength of schedule. Adjusted Efficiency Margin.
-\item [SOS OppO] Strength of schedule. Average AdjOE of opposing offenses.
-\item [SOS OppD] Strength of schedule. Average AdjDE of opposing defenses.
-\item [NCSOS AdjEM] Non-conference strength of schedule. Adjusted Efficiency Margin.
+\subsection{Number of wins and losses (W-L)}
+\begin{description}
+This is aggregative value of the total games won (W) and lost (L) for the team, for the specific season (year).
+\end{description}
+\subsection{Adjusted Efficiency Margin (AdjEM)}
+\begin{description}
+This is the difference between a team’s offensive and defensive efficiency.
+AdjEM = AdjOE - AdjDE
+AdjEM is used to rate teams. It was introduced by KenPom website prior to the 2016-2017 season. Prior to this metric, ratings were built on log5 and the Pythagorean expectation.
+
+The adjusted efficiency margin shows the number of points a team would be expected to outscore the average Division-I team over 100 possessions without adjusting for location of the game.
+For example, in 2015-2016, if Villanova played the average Division-I team on a neutral court, on average, Villanova would win a 100-possession game by about 32 points.
+Villanova's AdjOE is 121.7 and AdjDE is 89.7.
+AdjEM = 121.7 - 89.7 = 32
+
+AdjEM is used because it's simpler and it's a linear measure.
+The Pythagorean expectation, from the mind of Bill James, originated from baseball. It estimates how many games a team should have won based on the amount of runs it scored or allowed.
+It applied to college basketball by giving you a team's expected winning percentage against the average Division-I team.
+Pyth = (AdjOE^11.5) / (AdjOE^11.5 + AdjDE^11.5)
+It's clear the Pythagorean expectation is complicated. AdjEM is subtraction. That's it. A team's offensive efficiency minus its defensive efficiency.
+The difference when comparing teams using AdjEM versus log5 or the Pythagorean expectation is important too. The Pythagorean expectation for one team could be .96 and for another could be .93. The difference of .3 there is not the same as comparing teams with a .70 and .67 expected winning percentage because of the team's strength. It's murky.
+KenPom describes AdjEM as a linear measure giving the example of a team with a +31 AdjEM and a team with a +28 AdjEM the same as the difference between +4 and +1. It's more clear.
+
+URL: https://cbbstatshelp.com/ratings/adjem/
+\end{description}
+
+\subsection{Adjusted offensive efficiency (AdjO)}
+\begin{description}
+	A team's offensive efficiency is the amount of points it scores per 100 offensive possessions.
+	
+	OE = (Points scored * 100) / Possessions
+	
+	A team's pace is determined by how they like to play and how their opponents like to play.
+	
+	This is the reason efficiency numbers need to be adjusted. It accounts for competition or how a team and their opponents want to play.
+\end{description}
+
+\subsection{Adjusted defensive efficiency (AdjD)}
+\begin{description}
+	A team's defensive efficiency is the amount of points it allows per 100 defensive possessions.
+	
+	DE = (Points allowed * 100) / Possessions
+\end{description}
+
+\subsection{Adjusted tempo (AdjT)}
+\begin{description}
+	Possessions per 40 minutes.
+	In every game, each team wants to play at a certain pace. Adjusted tempo tries to tell you the pace each team wants to play.
+	It's an estimate of the pace a team would have against the team that wants to play at an average Division-I tempo.
+\end{description}
+
+\subsection{Luck rating (Luck)}
+\begin{description}
+Luck doesn't factor into a team's rating. It's a metric that compares a team's record to what they deserved based on their game-by-game efficiency.
+If a team is involved in a lot of close games, it shouldn't win or lose all of them. If a team wins all of the close games, they're viewed as a lucky. An unlucky team would lose all of their close games.
+Luck is measured using Dean Oliver's correlated Gaussian method.
+If this sounds complicated, it definitely is.
+Oliver explains it as something similar to a bell curve.
+
+            |           (Rtg-Opp.Rtg)           |
+Win% = NORM |-----------------------------------|
+            |       SD(Rating Difference)       |
+
+SD(Rating Difference) = SD(Rtg - Opp.Rtg)
+= SQRT[Var(Rtg)+Var(Opp.Rtg) - 2*Cov(Rtg,Opp.Rtg)]
+
+The components:
+Rtg: points scored per 100 possessions (offensive rating)
+Opp.Rtg: points allowed per 100 possessions (defensive rating)
+SD(): statistical standard deviation of quantity in parentheses ()
+Var(): statistical variance of quantity in parentheses ()
+Cov(): statistical covariance of quantities in parentheses ()
+
+Luck tells you the difference between expected winning percentage and its actual winning percentage.
+Luck doesn't use Pythagorean Winning Percentage (Pyth) as the expected winning percentage. Pyth is calculated by a team's offensive and defensive efficiencies.
+The correlated Gaussian method uses the distribution of a team's game efficiencies to determine the expected winning percentage. It includes both the average margin of victory and the variation in a team's margin of victory.
+This method takes into account that the majority or teams play to the level of their competition.
+
+Examples:
+In 2015-2016, Hampton was viewed as the second luckiest team in Division-I.
+Hampton was 21-11. It's actual winning percentage was .656.
+Using the correlated Gaussian method, Hampton's expect winning percentage was .499.
+Hampton's actual winning percentage is .157 points higher than its expected. This translates into roughly 5 wins that are attributed to luck.
+If you take a glance at Hampton's results, it played 3 overtime games and one double-overtime game. It won all 4 of these contests, which can be viewed as lucky.
+In comparison, the 2015-2016 Clemson Tigers finished 17-14. Clemson was ranked 339th out of 351 teams in luck.
+Clemson's actual winning percentage was .548.
+It's expected winning percentage using Oliver's method was .643.
+This is -0.095 points lower than expected. This means almost 3 losses were attributed to luck.
+Taking a look at Clemson's game-by-game results, you'll find 10 losses by a 7 points or less. This can be seen as unlucky.
+Remember luck doesn't factor into ratings 
+Luck isn't used when rating a team. It gives you an idea on how a team performs in close game and how it plays to its competition.
+A very lucky team will likely be rated lower by KenPom.
+Where an extremely unlucky team could be rated higher.
+Using our example above, Hampton (lucky) was 229th in the final 2015-2016 KenPom ratings.
+While Clemson (unlucky) was 48th in the final 2015-2016 KenPom ratings.
+
+URL: https://cbbstatshelp.com/ratings/luck/
+\end{description}
+
+\subsection{Strength of schedule (SOS)}
+\begin{description}
+A team's strength of schedule is made up of 3 components:
+\item AdjEM - the overall strength of schedule of a team.
+\item AdjO - Opponent's average adjusted offensive efficiency.
+\item AdjD - Opponent's average adjusted defensive efficiency.
+
+AdjEM for strength of schedule is calculated:
+AdjEM of SOS = AdjO - AdjD
+
+Prior to the 2016-17 season, KenPom started using AdjEM for ratings and strength of schedule instead of the Pythagorean expectation and log5.
+Another change is now KenPom is using Jeff Sagarin's WIN50 Method.
+
+Sagarin's WIN50 method shows the strength of a team that would be expected to win half its games against the team's schedule. It compares all teams on the same scale and reduces the impact of outliers.
+
+The previous method used by KenPom measured a team's strength of schedule by the average of its opponents' rating. This means outliers like playing the 350th or 351st team would have a negative impact on a team's SOS.
+
+The WIN50 method doesn't put too much emphasis on the quality of bad opponents a team plays. It's more fair than previous methods.
+
+Outside of factoring into a team's rating or predicting how it will perform, strength of schedule can be used to rate different conferences as a whole.
+
+URL: https://cbbstatshelp.com/ratings/strength-of-schedule
+	\subsection{Adjusted Efficiency Margin (SOS AdjEM)}
+	\begin{description}
+		The Adjusted Efficiency Margin, but just durring the season.
+	\end{description}
+	
+	\subsection{Average AdjOE of opposing offenses (SOS OppO)}
+	\begin{description}
+		The Adjusted Offence Efficiency just durring the season.
+	\end{description}
+	
+	\subsection{Average AdjDE of opposing defenses (SOS OppD)}
+	\begin{description}
+		The Adjusted Defence Efficiency just driving the season.
+	\end{description}
+
+\end{description}
+
+
+\subsection{Non-conference strength of schedule (NCSOS)}
+\begin{description}
+A team does have some control over its schedule. It can choose or agree to its non-conference schedule.
+The non-conference strength of schedule uses the 3 components only for this portion of the schedule. It doesn't include post season or conference games.
+
+	\subsection{Adjusted Efficiency Margin (NCSOS AdjEM)}
+	\begin{description}
+		NCSOS AdjEM is the non-conference strength of schedule of a team.
+		It's calulated using NCSOS AdjO and NCSOS AjdD:
+		NCSOS AdjEM = NCSOS AdjO - NCSOS AjdD
+	\end{description}
+\end{description}
+
 \end{description}
 
 %----------------------------------------------------------------------------------------
