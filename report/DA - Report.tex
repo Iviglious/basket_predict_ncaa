@@ -107,11 +107,21 @@ BCOR5mm, % Binding correction
 
 
 \section{Dataset}
+After analysing data sets from different sources we decided to use the KenPom statistical data of all US basketball teams for the past 15 years (from 2002). As helping dataset of the teams playing this year we used the kaggle's dataset.
 \subsection{Features description}
+The KenPom statistical data includes the years of 2002 until 2016 and includes 10 features. This data is collected and calculated based on the idea of the four factor concept from Dean Oliver.
+Oliver believes four factors determine why a team wins or loses. The four factors are:
+1. Shooting
+2. Avoiding turnovers
+3. Offensive rebounding
+4. Getting to the foul line
+A team is measured both offensively and defensively on these four factors.
 \begin{description}
 \subsection{Number of wins and losses (W-L)}
 \begin{description}
 This is aggregative value of the total games won (W) and lost (L) for the team, for the specific season (year).
+
+As we are trying to predict if team A will win against team B for the upcomming tournament (season) we can't use this feature as we will not know the wins and loses for the tested new season.
 \end{description}
 \subsection{Adjusted Efficiency Margin (AdjEM)}
 \begin{description}
