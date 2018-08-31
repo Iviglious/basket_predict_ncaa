@@ -6,4 +6,4 @@ The National Collegiate Athletic Association(NCAA) Basketball Tournament is not 
 
 This is a problem from Kaggle: https://www.kaggle.com/c/march-machine-learning-mania-2017
 
-To see more details, please check the wiki: https://github.research.its.qmul.ac.uk/ec16544/DACourseWork2017/wiki
+To see more details, please check the wiki: https://github.com/Iviglious/basket_predict_ncaa/wiki
